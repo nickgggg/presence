@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: helvetica;
     margin: 0;
@@ -24,7 +27,15 @@ header {
 }
 .logo>a {
     text-decoration: none;
-    color: white;
+}
+.logo>a h1 {
+    color: #ffffff;
+    -webkit-text-stroke: 1px white;
+    font-style: italic;
+    font-size: 2.5rem;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+    text-shadow: .1em 0em black;
 }
 .nav {
     display: flex;
@@ -110,9 +121,20 @@ hr {
     filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(87deg) brightness(104%) contrast(101%);
 }
 .services-grid-item h4 {
-    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1em;
 }
-
+/* business listing management */
+.listing-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    width: 50%;
+    margin-inline-start: 25%;
+}
+img.listing-icon {
+    width: 3em;
+}
 /* contact */
 #contact-section1 {
     height: 100%;
@@ -182,6 +204,10 @@ ul.footer-nav  {
     }
     .nav {
         justify-content: flex-start;
+    }
+    .listing-icons {
+        width: 80%;
+        margin-inline-start: 10%;
     }
 }
 @media (max-width:460px) {
