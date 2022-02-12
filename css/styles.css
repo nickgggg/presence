@@ -25,6 +25,7 @@ header {
 }
 .logo {
     display: flex;
+    margin-left: 1em;
 }
 .logo>a {
     text-decoration: none;
@@ -36,7 +37,21 @@ header {
     font-size: 2.5rem;
     margin-block-start: .5em;
     margin-block-end: .5em;
-    text-shadow: .1em 0em black;
+    /* text-shadow: 
+    -.1em -.1em #020a23,
+    -.15em -.15em #f4c430,
+    -.1em -.2em #ffffff,
+    0em -.25em #020a23,
+    .1em -.3em #f4c430;
+    */
+    text-shadow:
+    0em -.075em #6230f4,
+    0em -.1em #f4c330,
+    0em -.15em #f4c330de,
+    0em -.2em #f4c330b7,
+    0em -.25em #f4c3306b,
+    0em -.3em #f4c33041,
+    0em -.35em #f4c33018;
 }
 .nav {
     display: flex;
@@ -70,8 +85,31 @@ hr {
 .section#home-banner {
     text-align: center;
     color: white;
-    background: rgb(6,31,110);
-    background: linear-gradient(135deg, rgba(6,31,110,1) 0%, rgba(4,21,72,1) 50%, rgba(2,10,35,1) 100%);
+    /* background: rgb(6,31,110);
+    background: linear-gradient(135deg, #061f6e 0%, #041548 50%, #020a23 100%); */
+}
+.section#home-banner {
+    background: linear-gradient(270deg, #061f6e, #041548, #020a23);
+    background-size: 600% 600%;
+    -webkit-animation: bg-gradient 10s ease infinite;
+    -moz-animation: bg-gradient 10s ease infinite;
+    animation: bg-gradient 10s ease infinite;
+}
+
+@-webkit-keyframes bg-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bg-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bg-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 .home-banner-img img {
     width: 20em;
@@ -81,19 +119,22 @@ hr {
     display: flex;
     justify-content: center;
 }
+a.button {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+.button:hover {
+    background: #041548;
+}
 .button {
     display: block;
     margin: 2em 0 0 0;
     padding: .75em 2em .75em 2em;
     border: none;
     background: #6230f4;
-    border-radius: 7%;
+    border-radius: .75em;
     width: 10em;
-}
-a.button {
-    text-decoration: none;
-    text-align: center;
-    color: white;
 }
 /* services */
 .section#services-main {
@@ -115,7 +156,7 @@ a.button {
 .services-grid>a {
     text-decoration: none;
     color: white;
-    border-radius: 7%;
+    border-radius: 1em;
     /* background: rgba(0, 0, 0, 0.5);
     box-shadow: .25rem .25rem .5rem rgb(10, 10, 10); */
     background: rgb(2 10 35 / 75%);
@@ -256,6 +297,9 @@ ul.footer-nav  {
     }
     .nav {
         justify-content: flex-start;
+    }
+    .logo {
+        margin: 0;
     }
     .section {
         padding: 10%
