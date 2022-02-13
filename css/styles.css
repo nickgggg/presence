@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -32,9 +32,11 @@ header {
 }
 .logo>a h1 {
     color: #ffffff;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
+    /* font-family: Arial, Helvetica, sans-serif; */
     /* font-style: italic; */
     font-size: 2.5rem;
+    /* text-transform: lowercase; */
     margin-block-start: .5em;
     margin-block-end: .5em;
     /* text-shadow: 
@@ -44,14 +46,15 @@ header {
     0em -.25em #020a23,
     .1em -.3em #f4c430;
     */
-    text-shadow:
+    /* text-shadow:
     0em -.075em #6230f4,
     0em -.1em #f4c330,
     0em -.15em #f4c330de,
     0em -.2em #f4c330b7,
     0em -.25em #f4c3306b,
     0em -.3em #f4c33041,
-    0em -.35em #f4c33018;
+    0em -.35em #f4c33018; */
+    text-shadow: -.1em -.05em rgba(0, 0, 0, 0.5);
 }
 .nav {
     display: flex;
@@ -72,7 +75,7 @@ main {
     padding-bottom: 5em;
 }
 hr {
-    border: 2px solid #6230f4;
+    border: 2px solid #541df3;
     width: 60%;
 }
 .section {
@@ -89,11 +92,30 @@ hr {
     background: linear-gradient(135deg, #061f6e 0%, #041548 50%, #020a23 100%); */
 }
 .section#home-banner {
-    background: linear-gradient(270deg, #061f6e, #041548, #020a23);
-    background-size: 600% 600%;
+    background: linear-gradient(270deg, #082a93, #061f6e, #041548, #020a23);
+    background-size: 800% 800%;
     -webkit-animation: bg-gradient 10s ease infinite;
     -moz-animation: bg-gradient 10s ease infinite;
     animation: bg-gradient 10s ease infinite;
+}
+.section#home-services {
+    background-image: url(img/devices.svg)
+}
+
+@-webkit-keyframes bg-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bg-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bg-gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 @-webkit-keyframes bg-gradient {
@@ -197,7 +219,7 @@ a.button {
     padding: 1rem;
     height: 5rem;
     width: auto;
-    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(87deg) brightness(104%) contrast(101%);
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(87deg) brightness(75%) contrast(101%);
 }
 .services-grid-item h4 {
     text-transform: uppercase;
@@ -237,8 +259,8 @@ img.listing-icon {
     padding: 0;
 }
 iframe {
-    aspect-ratio: 1 / 1;
-    height: 100%;
+    aspect-ratio: 1 / 1.5;
+    height: auto;
     width: 100%;
 }
 footer {
@@ -315,10 +337,11 @@ ul.footer-nav  {
 }
 @media (max-width:500px) {
     .section {
-        padding: 5%
+        padding: 1.5em;
     }
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
     }
     .services-grid-item>img,h4 {
         margin: .25rem;
