@@ -2,43 +2,53 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    min-height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
-    /* max-width: 60vw;
-    margin-inline-start: 20%;
-    margin-inline-end: 20%; */
-    background-color: #242424;
+    background: linear-gradient(135deg, rgba(253,253,255,1) 0%, rgba(234,239,254,1) 50%, rgba(216,225,253,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+p {
+    line-height: 1.5rem;
 }
 header, footer {
     padding: .5rem;
-    /* background-color: #3060f4; */
     background: rgb(98,48,244);
-    background: linear-gradient(135deg, rgba(98,48,244,1) 0%, rgba(48,96,244,1) 51%, rgba(48,194,244,1) 100%);
+    background: linear-gradient(135deg, #6230f4 0%, #3060f4 50%, #30c2f4 100%);
 
     color: white;
     font-size: medium;
 }
 header {
     display: flex;
+    align-items: center;
+    padding: 1.5em;
 }
 .logo {
     display: flex;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
     margin-left: 1em;
+}
+.logo#graphic {
+    width: auto;
+    height: 2.5em;
 }
 .logo>a {
     text-decoration: none;
 }
 .logo>a h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
     color: #ffffff;
-    -webkit-text-stroke: 2px white;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    /* font-style: italic; */
+    /* -webkit-text-stroke: 2px white; */
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     /* text-transform: lowercase; */
-    margin-block-start: .5em;
-    margin-block-end: .5em;
     /* text-shadow: 
     -.1em -.1em #020a23,
     -.15em -.15em #f4c430,
@@ -54,12 +64,11 @@ header {
     0em -.25em #f4c3306b,
     0em -.3em #f4c33041,
     0em -.35em #f4c33018; */
-    text-shadow: -.1em -.05em rgba(0, 0, 0, 0.5);
+    text-shadow: -.1em -.05em rgba(0, 0, 0, 0.25);
 }
 .nav {
     display: flex;
     flex: auto;
-    align-items: center;
     justify-content: flex-end;
 }
 .nav>a {
@@ -69,8 +78,6 @@ header {
     border-bottom: 2px solid #f4c430;
 }
 main {
-    background: rgb(253,253,255);
-    background: linear-gradient(135deg, rgba(253,253,255,1) 0%, rgba(234,239,254,1) 50%, rgba(216,225,253,1) 100%);
     height: 100%;
     padding-bottom: 5em;
 }
@@ -162,8 +169,7 @@ a.button {
 .section#services-main {
     text-align: center;
     color: white;
-    /* background: #f4c430;
-    background: linear-gradient(315deg, rgba(244,196,48,1) 0%, rgba(244,48,96,1) 50%, rgba(98,48,244,1) 100%); */
+    /* background: linear-gradient(315deg, #f4c430 0%, #f43060 50%, #6230f4 100%); */
     background: rgb(6,31,110);
     background: linear-gradient(135deg, rgba(6,31,110,1) 0%, rgba(4,21,72,1) 50%, rgba(2,10,35,1) 100%);
 }
@@ -240,20 +246,6 @@ img.listing-icon {
 #contact-section-top {
     height: 100%;
 }
-/* google form */
-/* .section#contact-form {
-    overflow: hidden;
-    padding-top: 56.25%;
-    position: relative;
-}
-.section iframe {
-    border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-} */
 .section#contact-form {
     width: 100%;
     padding: 0;
@@ -262,6 +254,10 @@ iframe {
     aspect-ratio: 1 / 1.5;
     height: auto;
     width: 100%;
+}
+iframe.digital-signage-example {
+    aspect-ratio: 9 / 16;
+    width: 90%;
 }
 footer {
     font-size: small;
@@ -281,19 +277,14 @@ ul.footer-nav  {
 }
 /* media queries */
 @media (min-width:2560px) {
-    body {
-        max-width: 50vw;
-        margin-inline-start: 25vw;
-        margin-inline-end: 25vw;
-    }
     header {
-        padding: 0 5rem 0 5rem;
+        padding: 2em 5em;
     }
     hr {
-        width: 65%;
+        width: 50%;
     }
     .section {
-        padding: 1rem 20rem 1rem 20rem;
+        padding: 1em 50em 1em 50em;
     }
     .services-grid {
         gap: 2rem;
@@ -316,12 +307,16 @@ ul.footer-nav  {
     }
     header {
         flex-direction: column;
+        gap: 1em;
     }
     .nav {
         justify-content: flex-start;
     }
     .logo {
         margin: 0;
+    }
+    .logo#graphic {
+        height: 4em;
     }
     .section {
         padding: 10%
