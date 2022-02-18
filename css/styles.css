@@ -96,9 +96,6 @@ hr {
 .section {
     padding: 5% 25%;
 }
-/* .section:last-child {
-    border-bottom: none;
-} */
 /* home page */
 .section#home-banner {
     text-align: center;
@@ -113,9 +110,6 @@ hr {
 }
 .section#home-banner h1 span{
     border-bottom: 2px solid #f4c430;
-}
-.section#home-services {
-    background-image: url(/img/devices.svg)
 }
 
 @-webkit-keyframes bg-gradient {
