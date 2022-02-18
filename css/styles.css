@@ -244,7 +244,7 @@ a.button {
     text-transform: uppercase;
     font-size: 1em;
 }
-.button#signage-button {
+.button#signage-button, .button#qrmenu-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
