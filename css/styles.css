@@ -261,8 +261,9 @@ img.listing-icon {
     width: 3em;
 }
 /* contact */
-#contact-section-top {
-    height: 100%;
+.section#contact-section-top>p span {
+    padding: 2px;
+    background-color: #f4c430;
 }
 .section#contact-form {
     width: 100%;
