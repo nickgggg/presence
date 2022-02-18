@@ -28,7 +28,7 @@ header, footer {
 header {
     display: flex;
     align-items: center;
-    padding: 1.5em;
+    padding: 2em;
 }
 .logo {
     display: flex;
@@ -70,6 +70,9 @@ header {
     0em -.35em #f4c33018; */
     text-shadow: -.1em -.05em rgba(0, 0, 0, 0.25);
 }
+.logo>a h1 span {
+    font-family: monospace;
+}
 .nav {
     display: flex;
     flex: auto;
@@ -79,6 +82,7 @@ header {
     text-decoration: none;
     color: white;
     margin-right: 1rem;
+    margin-left: 1rem;
     border-bottom: 2px solid #f4c430;
 }
 main {
@@ -101,16 +105,17 @@ hr {
     color: white;
     /* background: rgb(6,31,110);
     background: linear-gradient(135deg, #061f6e 0%, #041548 50%, #020a23 100%); */
-}
-.section#home-banner {
     background: linear-gradient(270deg, #082a93, #061f6e, #041548, #020a23);
     background-size: 800% 800%;
     -webkit-animation: bg-gradient 10s ease infinite;
     -moz-animation: bg-gradient 10s ease infinite;
     animation: bg-gradient 10s ease infinite;
 }
+.section#home-banner h1 span{
+    border-bottom: 2px solid #f4c430;
+}
 .section#home-services {
-    background-image: url(img/devices.svg)
+    background-image: url(/img/devices.svg)
 }
 
 @-webkit-keyframes bg-gradient {
@@ -144,10 +149,16 @@ hr {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
 .home-banner-img img {
     width: 20em;
     filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(87deg) brightness(104%) contrast(101%);
 }
+/* .section#home-contact {
+    background-image: url(../img/support.svg);
+    background-repeat: space;
+    background-position: center;
+} */
 .button-container {
     display: flex;
     justify-content: center;
@@ -230,10 +241,19 @@ a.button {
     height: 5rem;
     width: auto;
     filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(87deg) brightness(75%) contrast(101%);
+
+}
+.external-link#svg {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(87deg) brightness(100%) contrast(101%);
 }
 .services-grid-item h4 {
     text-transform: uppercase;
     font-size: 1em;
+}
+.button#signage-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 /* business listing management */
 .listing-icons {
