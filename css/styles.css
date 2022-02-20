@@ -243,6 +243,10 @@ a.button {
 .services-grid-item h4 {
     text-transform: uppercase;
     font-size: 1em;
+    margin: 0 1rem;
+}
+.services-list li::marker {
+    color: #f4c430;
 }
 .button#signage-button, .button#qrmenu-button {
     display: flex;
